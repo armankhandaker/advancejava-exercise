@@ -22,6 +22,9 @@
 
 package com.masterdevskills.cha1.ext1;
 
+import java.nio.file.Path;
+import java.util.Optional;
+
 /**
  * @author A N M Bazlur Rahman @bazlur_rahman
  * @since 04 August 2020
@@ -36,12 +39,19 @@ public class LambdaExpression2 {
 	 * the time it takes to execute the method
 	 */
 	public void executionTime() {
-		//TODO add your code here;
+
+		Executable executable = () -> System.out.println("The unstoppable marching of time that is slowly guiding us all towards an inevitable death");
+
+	    long start = System.nanoTime();
+		executable.execute();
+		long duration = System.nanoTime() - start;
+
+		System.out.println("Execution time (ns): " + duration);
 	}
 
 	/* TODO: use the above of method here
 	 */
 	public void run() {
-		//executionTime();
+	    executionTime();
 	}
 }
